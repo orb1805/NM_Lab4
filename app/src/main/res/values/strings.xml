@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NM_Lab4</string>
+    <string name="euler_method">Решение ОДУ</string>
+</resources>

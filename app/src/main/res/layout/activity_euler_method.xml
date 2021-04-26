@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EulerMethodActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/euler_method"
+            android:textSize="@dimen/system_size"
+            android:layout_marginBottom="20sp"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="y''-(1 + 2tg(x)^2) = 0"
+            android:typeface="monospace"
+            android:textSize="@dimen/system_size"
+            android:layout_marginBottom="20sp"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/system_size1"
+                android:typeface="monospace"
+                android:text="y(0) = "
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/et_first1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal|numberSigned"
+                android:typeface="monospace"
+                android:text="1"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/system_size1"
+                android:typeface="monospace"
+                android:text="y'(0) = "
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/et_first2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal|numberSigned"
+                android:typeface="monospace"
+                android:text="2"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/system_size1"
+                android:typeface="monospace"
+                android:text="["
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/et_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal|numberSigned"
+                android:typeface="monospace"
+                android:text="0"
+                android:layout_weight="1.5"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/system_size1"
+                android:typeface="monospace"
+                android:text=","
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/et_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal|numberSigned"
+                android:typeface="monospace"
+                android:text="1"
+                android:layout_weight="1.5"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/system_size1"
+                android:typeface="monospace"
+                android:text="]"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/system_size1"
+                android:typeface="monospace"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/system_size1"
+                android:typeface="monospace"
+                android:text="h="
+                android:layout_weight="1.5"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/et_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal|numberSigned"
+                android:typeface="monospace"
+                android:text="0.1"
+                android:layout_weight="1.5"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/btn_euler"
+                android:textSize="7sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Метод эйлера"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_rg"
+                android:textSize="7sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Метод рунге-кутта"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_adams"
+                android:textSize="7sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Метод Адамса"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_ideal"
+                android:textSize="7sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Образцовая функция"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/im_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
